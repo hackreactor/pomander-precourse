@@ -36,7 +36,7 @@ echo -e "${COLOR_MAGENTA}Sniffing your code, hang tight...${COLOR_RESET}"
 
 for FILE in $STAGED_FILES
 do
-  eslint "$FILE"
+  eslint --max-warnings 0 "$FILE"
 
   if [[ "$?" == 0 ]]; then
     echo -e "👍  Passed: $FILE"
